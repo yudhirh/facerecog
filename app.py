@@ -366,7 +366,6 @@ def detect_face_and_compute_similarity(
     image_a_path: str,
     image_b_path: str,
 ) -> Tuple[float, Dict[str, float], Dict]:
-    ensure_opencv_haarcascade()
     embed_a = DeepFace.represent(
         img_path=image_a_path,
         model_name="ArcFace",
